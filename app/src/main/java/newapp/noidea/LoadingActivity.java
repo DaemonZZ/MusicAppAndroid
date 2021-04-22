@@ -3,7 +3,10 @@ package newapp.noidea;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -98,7 +101,17 @@ public class LoadingActivity extends AppCompatActivity {
                 ((ViewManager)v.getParent()).removeView(v);
                 meo.startAnimation(endSplash);
                 loading.setVisibility(View.VISIBLE);
-                loading.startAnimation(fade_in);
+                loading.setAnimation(fade_in);
+                //Main activity load after animation finish
+                loading.animate().setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+
+                        Intent intent = new Intent(LoadingActivity.this,MainActivity.class);
+                        startActivity(intent);
+                    }
+                }).setDuration(6000).start();
             }
         });
     }
