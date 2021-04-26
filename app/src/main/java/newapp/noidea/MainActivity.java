@@ -39,31 +39,40 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
     }
 
 
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     public void onCheckedChanged(RadioGroup group, int checkedId) {
         if(btnHome.isChecked()){
-            btnHome.setBackgroundColor(Color.RED);
+            btnHome.setBackgroundResource(R.drawable.round_corner);
+//            btnHome.setTextColor(Color.parseColor("#ff6600"));
             replaceFragment(frHome);
         }
         else {
             btnHome.setBackgroundResource(R.color.menu_gray);
+//            btnHome.setTextColor(Color.WHITE);
         }
         if(btnUser.isChecked()){
-            btnUser.setBackgroundColor(Color.RED);
+            btnUser.setBackgroundResource(R.drawable.round_corner);
+//            btnUser.setTextColor(Color.parseColor("#ff6600"));
             replaceFragment(frUser);
         }
         else {
             btnUser.setBackgroundResource(R.color.menu_gray);
+//            btnUser.setTextColor(Color.WHITE);
         }
         if(btnBxh.isChecked()){
-            btnBxh.setBackgroundColor(Color.RED);
+            btnBxh.setBackgroundResource(R.drawable.round_corner);
+//            btnBxh.setTextColor(Color.parseColor("#ff6600"));
             replaceFragment(frBxh);
         }
         else {
             btnBxh.setBackgroundResource(R.color.menu_gray);
+//            btnBxh.setTextColor(Color.WHITE);
         }
 
     }
+
 
     public void initFragment(){
         FragmentManager frm = getSupportFragmentManager();

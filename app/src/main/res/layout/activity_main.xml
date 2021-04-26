@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
     tools:context=".MainActivity">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,26 +14,30 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="39"
+            android:layout_weight="100"
             android:orientation="horizontal">
+
+
             <fragment
                 android:id="@+id/fr"
                 android:name="newapp.noidea.UserFragment"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#2a2a2a"
             android:layout_weight="1"
             android:orientation="horizontal">
 
@@ -49,9 +53,16 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:text="Home"
+                    android:text="Trang Chủ"
                     android:gravity="center"
-                    android:background="#404040" />
+                    android:textColor="@drawable/rbtn_color"
+                    android:drawableTop="@drawable/ms"
+                    android:background="#2a2a2a"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:drawableTint="@drawable/rbtn_color"
+                     />
 
                 <RadioButton
                     android:id="@+id/btn_user"
@@ -59,20 +70,133 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:text="User"
-                    android:background="#404040"
-                    android:gravity="center" />
+                    android:text="Trang Chủ"
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_color"
+                    android:drawableTop="@drawable/ms"
+                    android:background="#2a2a2a"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:drawableTint="@drawable/rbtn_color"
+                    />
                 <RadioButton
                     android:id="@+id/btn_bxh"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:button="@null"
-                    android:text="User"
-                    android:background="#404040"
-                    android:gravity="center" />
+                    android:text="Trang Chủ"
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_color"
+                    android:drawableTop="@drawable/ms"
+                    android:background="#2a2a2a"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:drawableTint="@drawable/rbtn_color"
+                    />
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="Trang Chủ"
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_color"
+                    android:drawableTop="@drawable/ms"
+                    android:background="#2a2a2a"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:drawableTint="@drawable/rbtn_color"
+                    />
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:text="Trang Chủ"
+                    android:gravity="center"
+                    android:textColor="@drawable/rbtn_color"
+                    android:drawableTop="@drawable/ms"
+                    android:background="#2a2a2a"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:paddingTop="10dp"
+                    android:drawableTint="@drawable/rbtn_color"
+                    />
             </RadioGroup>
         </LinearLayout>
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d02a2a2a"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp">
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp" />
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/avatar"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ico_profile" />
+
+        </RelativeLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtSearch"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:hint="Tìm kiếm"
+            android:textColorHint="#FF9800"
+            app:boxBackgroundColor="#404040"
+            app:boxCornerRadiusBottomEnd="20dp"
+            app:boxCornerRadiusBottomStart="20dp"
+            app:boxCornerRadiusTopEnd="20dp"
+            app:boxCornerRadiusTopStart="20dp"
+            app:boxStrokeColor="#FFAB40"
+            app:boxStrokeWidth="2dp"
+            app:hintEnabled="false"
+            app:hintTextColor="#000">
+
+            <AutoCompleteTextView
+
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:drawableStart="@drawable/find_icon"
+                android:drawableLeft="@drawable/find_icon"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:singleLine="true"
+                android:textColor="#F4F42A"
+                android:textCursorDrawable="@drawable/color_cursor" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
